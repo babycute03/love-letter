@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lá Thư</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: #f5ebe0;
+            font-family: 'Lora', serif;
+            color: #4a3b32;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .letter-container {
+            background: #fffdfa;
+            margin: 40px 0;
+            padding: 40px 32px 36px 32px;
+            border-radius: 14px;
+            box-shadow: 0 8px 40px rgba(180, 109, 81, 0.10);
+            max-width: 600px;
+            width: 100%;
+        }
+        .letter-title {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 26px;
+            color: #b06d51;
+            font-family: 'Playfair Display', serif;
+        }
+        .letter-content {
+            font-size: 1.11em;
+            line-height: 1.8;
+            min-height: 280px;
+            margin-bottom: 20px;
+            white-space: pre-line; /* keep enters (new lines) */
+        }
+        .letter-signature {
+            text-align: right;
+            margin-top: 36px;
+            font-style: italic;
+            font-weight: 600;
+            color: #b06d51;
+            font-size: 1em;
+        }
+        /* Optional: eliminate outline on click in most browsers */
+        textarea, input:focus, textarea:focus { outline: none;}
+        /* Make text areas simple and clean */
+        .editable {
+            width: 100%;
+            min-height: 280px;
+            font-size: 1.11em;
+            font-family: 'Lora', serif;
+            border: none;
+            background: transparent;
+            color: #4a3b32;
+            resize: vertical;
+            margin-bottom: 20px;
+        }
+        .editable:empty:before {
+            content: attr(placeholder);
+            color: #999;
+        }
+        .signature-edit {
+            border: none;
+            background: transparent;
+            font-family: inherit;
+            font-style: italic;
+            color: #b06d51;
+            font-size: 1em;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter-container">
+        <input
+            type="text"
+            class="letter-title"
+            placeholder="Tiêu đề thư (ví dụ: Gửi Gia Bảo,)"
+            style="border: none; background: transparent; width: 100%; text-align: center; outline: none;"
+        >
+
+        <textarea
+            class="editable letter-content"
+            placeholder="Viết nội dung lá thư tại đây..."
+            rows="13"
+        ></textarea>
+
+        <input
+            type="text"
+            class="letter-signature signature-edit"
+            placeholder="Chữ ký (ví dụ: - sora -)"
+            style="width: 100%;"
+        >
+    </div>
+</body>
+</html>
